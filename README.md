@@ -33,9 +33,8 @@ Para ejecutar las pruebas, desde `api/` corré estos comandos.
 
 ## Publicar la web y su API
 
-1. En Render, creá un Blueprint conectado a este repositorio. `render.yaml` define el servicio `food-store-santi-prandina-api`. Cuando esté activo, comprobá su ruta `/docs`.
-2. En GitHub, abrí **Settings → Secrets and variables → Actions → Variables**. Creá la variable `FOOD_STORE_API_URL` con la dirección HTTPS de ese servicio, sin `/docs`.
-3. En **Settings → Pages**, elegí **GitHub Actions** como origen. En **Actions**, ejecutá **Publicar Food Store**.
-4. Cuando termine la acción, abrí [Food Store en GitHub Pages](https://santiprandina.github.io/Trabajo_Integrador_Programcion/).
+La [API publicada en Railway](https://trabajointegradorprogramcion-production.up.railway.app/docs) usa la rama `main`, la carpeta raíz `/api` y Python 3.14. GitHub Actions ya tiene configurada esa dirección para publicar [Food Store en GitHub Pages](https://santiprandina.github.io/Trabajo_Integrador_Programcion/).
 
-La API autoriza CORS para el sitio de Santi y los dos orígenes locales del puerto 5500. Su SQLite es independiente. En el plan gratuito de Render, los cambios en esa base pueden perderse cuando se reinicia o vuelve a desplegar la instancia.
+Para cambiar la dirección de la API, usá la variable de repositorio `FOOD_STORE_API_URL` con el origen HTTPS, sin `/docs`, y ejecutá **Actions → Publicar Food Store → Run workflow**.
+
+La API autoriza CORS para el sitio de Santi y los dos orígenes locales del puerto 5500. En Railway, SQLite usa el almacenamiento del servicio. Los cambios de esa base pueden perderse cuando Railway reemplaza el contenedor.

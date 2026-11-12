@@ -24,7 +24,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Configurar la API publicada
         env:
-          FOOD_STORE_API_URL: ${{ vars.FOOD_STORE_API_URL }}
+          FOOD_STORE_API_URL: ${{ vars.FOOD_STORE_API_URL || 'https://trabajointegradorprogramcion-production.up.railway.app' }}
         run: |
           python - <<'PY'
           import json
