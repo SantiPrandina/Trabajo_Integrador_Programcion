@@ -1,6 +1,6 @@
 # Trabajo_Integrador_Programcion
 
-Food Store es un catálogo con filtro por categoría, una tabla paginada y un formulario para crear y editar productos. La tabla permite la baja lógica con confirmación. Esta versión adapta el [Food Store de Joel Herrera](https://github.com/joelherrera-print/Integrador_Progamacion_lll) con una interfaz oscura y una nueva foto de portada.
+Food Store es un catálogo con filtro por categoría, una tabla paginada y un formulario para crear y editar productos. La tabla permite la baja lógica con confirmación.  con una interfaz oscura y una nueva foto de portada.
 
 - `api/` contiene FastAPI, SQLModel, SQLite y la autocorrección del parcial.
 - `web/` contiene el sitio en HTML, CSS y JavaScript.
